@@ -34,7 +34,7 @@ export const Header = () => {
             <SignInButton
               mode="modal"
               forceRedirectUrl="/learn"
-              fallbackRedirectUrl="/learn"
+              // fallbackRedirectUrl="/learn"
               // afterSignInUrl="/learn"
               // afterSignUpUrl="/learn"
             >

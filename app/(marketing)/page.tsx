@@ -43,7 +43,7 @@ const Home = () => {
               <SignInButton
                 mode="modal"
                 forceRedirectUrl="/learn"
-                fallbackRedirectUrl="/learn"
+                // fallbackRedirectUrl="/learn"
               >
                 <Button size="lg" variant="primaryOutline" className="w-full">
                   I already have an account
