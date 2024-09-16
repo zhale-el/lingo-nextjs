@@ -32,8 +32,8 @@ const Home = () => {
             <SignedOut>
               <SignUpButton
                 mode="modal"
-                forceRedirectUrl="/learn"
-                fallbackRedirectUrl="/learn"
+                afterSignInUrl="/learn"
+                afterSignUpUrl="/learn"
               >
                 <Button size="lg" variant="Secondary" className="w-full">
                   Get Started
@@ -42,8 +42,8 @@ const Home = () => {
 
               <SignInButton
                 mode="modal"
-                forceRedirectUrl="/learn"
-                // fallbackRedirectUrl="/learn"
+                afterSignInUrl="/learn"
+                afterSignUpUrl="/learn"
               >
                 <Button size="lg" variant="primaryOutline" className="w-full">
                   I already have an account
