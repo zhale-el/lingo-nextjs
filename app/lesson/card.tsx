@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { challenges } from "@/db/schema";
 import { cn } from "@/lib/utils";
 
@@ -38,10 +40,48 @@ export const Card = ({
         selected &&
           status === "wrong" &&
           "border-rose-300 bg-rose-100 hover:bg-rose-100",
-        disabled && ""
+        disabled && "pointer-events-none hover:bg-white",
+        type === "ASSIST" && "lg:p-3 w-full"
       )}
     >
-      card
+      {imageSrc && (
+        <div className="relative aspect-square mb-4 max-h-[80px] lg:max-h-[150px] w-full">
+          <Image src={imageSrc} fill alt={text} />
+        </div>
+      )}
+
+      <div
+        className={cn(
+          "flex items-center justify-between",
+          type === "ASSIST" && "flex-row-reverse"
+        )}
+      >
+        {type === "ASSIST" && <div />}
+        <p
+          className={cn(
+            "text-neutral-600 text-sm lg:text-base",
+            selected && "text-sky-500",
+            selected && status === "correct" && "text-green-500",
+            selected && status === "wrong" && "text-rose-500"
+          )}
+        >
+          {text}
+        </p>
+
+        <div
+          className={cn(
+            "lg:w-[30px] lg:h-[30px] w-[20px] border-2 flex items-center justify-center rounded-lg text-neutral-400 lg:text-[15px] text-xs font-semibold",
+
+            selected && "border-sky-300 text-sky-500",
+            selected &&
+              status === "correct" &&
+              "border-green-500 text-green-500",
+            selected && status === "wrong" && "border-rose-500 text-rose-500"
+          )}
+        >
+          {shortcut}
+        </div>
+      </div>
     </div>
   );
 };
