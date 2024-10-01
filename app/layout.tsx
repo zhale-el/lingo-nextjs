@@ -6,6 +6,7 @@ import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 
 import { Toaster } from "@/components/ui/sonner";
+import { ExitModal } from "@/components/modals/exit-modal";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -35,6 +36,7 @@ export default function RootLayout({
       <html lang="en">
         <body className={inter.className}>
           <Toaster />
+          <ExitModal />
           {children}
         </body>
       </html>
