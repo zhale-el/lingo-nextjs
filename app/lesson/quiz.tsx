@@ -7,6 +7,7 @@ import { challenges, challengeOptions } from "@/db/schema";
 import { Header } from "./header";
 import { QuestionBubble } from "./question-bubble";
 import { Challenge } from "./challenge";
+import { Footer } from "./footer";
 
 type Props = {
   initialPercentage: number;
@@ -91,6 +92,7 @@ font-bold text-neutral-700"
           </div>
         </div>
       </div>
+      <Footer disabled={!selectedOption} status={status} onCheck={() => {}} />
     </>
   );
 };
