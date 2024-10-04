@@ -74,6 +74,7 @@ export const Quiz = ({
 
       return;
     }
+
     const correctOption = options.find((option) => option.correct);
 
     if (!correctOption) {
