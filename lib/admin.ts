@@ -2,7 +2,7 @@ import { auth } from "@clerk/nextjs";
 
 const adminIds = ["user_2m6wLOGPsuNg7CuO7KHp5Ou9fte"];
 
-export const getIsAdmin = () => {
+export const isAdmin = () => {
   const { userId } = auth();
 
   if (!userId) {
