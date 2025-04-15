@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   title: "Lingo App",
   description: "Lingo App",
 };
+// test
 
 export default function RootLayout({
   children,
